@@ -24,6 +24,15 @@ function validate(form,error) {
         error.innerHTML = 'Matin kiritilishi shart'
     }
 
+    if (Number(input.value)) {
+        alert("Raqam kiritish mumkin emas");
+        form.style.outlineColor = 'red';
+        form.focus();
+        return false;
+    } else {
+        form.style.outlineColor = 'lightgray';
+    }
+
     return true
 }
 
